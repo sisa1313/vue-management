@@ -1,0 +1,60 @@
+.login {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("assets/img/login_bg.png") no-repeat center;
+  background-size: cover;
+  .login-box {
+    width: 340px;
+    padding: 25px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px 1px #fff;
+    background-color: hsla(0,0%,100%,.3);
+    .login-btn {
+      width: 100%;
+      height: 34px;
+      line-height: 34px;
+      border-radius: 4px;
+      background-color: #03c8f7;
+      cursor: pointer;
+    }
+    .login-uname, .login-pwd {
+      width: 240px;
+      height: 40px;
+      margin-top: 20px;
+      padding: 4px 6px 4px 80px;
+      background-color: transparent;
+      color: #fff;
+      outline: none;
+    }
+    .login-uname {
+      background: url("assets/img/username.png") no-repeat;
+    }
+    .login-pwd {
+      background: url("assets/img/password.png") no-repeat;
+    }
+    .login-uname::-webkit-input-placeholder, .login-pwd::-webkit-input-placeholder { /* WebKit browsers*/
+      color: #fff;
+    }
+    .login-uname::-moz-input-placeholder, .login-pwd::-moz-input-placeholder { /* Moz browsers*/
+      color: #fff;
+    }
+    .login-uname::-ms-input-placeholder, .login-pwd::-ms-input-placeholder { /* Ms browsers*/
+      color: #fff;
+    }
+    .input_close{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      margin-top: -40px;
+      margin-right: 15px;
+      cursor: pointer;
+      right: 30px;
+      background: url("assets/img/close_n_w.png") center center no-repeat;
+    }
+  }
+  .el-button {
+    width: 80%;
+  }
+}

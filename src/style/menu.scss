@@ -1,0 +1,25 @@
+.el-menu.el-menu-vertical-aside {
+  height: 100%;
+  .el-submenu {
+    .el-menu {
+      text-indent: 20px;
+      .el-menu-item {
+        min-width: inherit;
+      }
+    }
+    i {
+      color: #fff;
+    }
+  }
+  .el-menu-item {
+    i {
+      color: #fff;
+    }
+  }
+  .el-menu-item.is-active {
+    background-color: #327ECC!important;
+  }
+}
+.el-menu-vertical-aside:not(.el-menu--collapse) {
+  width: 200px;
+}

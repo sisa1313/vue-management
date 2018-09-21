@@ -1,0 +1,51 @@
+.el-container {
+  height: 100%;
+  .el-header {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    .el-menu-header-left {
+      li {
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 64px;
+        height: 100%;
+      }
+    }
+    .el-menu-header-right {
+      margin-right: 40px;
+      li {
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 80px;
+        height: 100%;
+        i {
+          transform: rotate(45deg);
+        }
+      }
+      span {
+        display: block;
+        img {
+          width: 40px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .el-main {
+    padding: 0;
+    background: #FFF;
+    .blank {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "title": "瀑布流",
+    "name": "waterfall",
+    "leaf": 0,
+    "lvl": 1,
+    "icon": "el-icon-a-image"
+  },
+  {
+    "title": "拖拽",
+    "name": "draggable",
+    "leaf": 0,
+    "lvl": 1,
+    "icon": "el-icon-a-block"
+  },
+  {
+    "title": "地图",
+    "name": "map",
+    "leaf": 0,
+    "lvl": 1,
+    "icon": "el-icon-a-pointmap"
+  },
+  {
+    "title": "图表",
+    "name": "echarts",
+    "leaf": 0,
+    "lvl": 1,
+    "icon": "el-icon-a-areachart"
+  },
+  {
+    "title": "表单组件",
+    "name": "form",
+    "leaf": 1,
+    "lvl": 1,
+    "icon": "el-icon-a-table",
+    "children": [
+      {
+        "title": "表单1",
+        "name": "form1",
+        "leaf": 0,
+        "lvl": 2,
+        "children": []
+      }
+    ]
+  }
+]
