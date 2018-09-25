@@ -1,9 +1,9 @@
-# vue-demo
+# vue-management
 
 ### 前言
-> vue-demo测试
+> vue-management测试
 
-- [GitHub地址](https://github.com/sisa1313/vue-demo)
+- [GitHub地址](https://github.com/sisa1313/vue-management)
 
 ### 依赖模块
 <span style="color: rgb(184,49,47);">项目是用Vue CLI构建的</span>
