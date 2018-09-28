@@ -2,28 +2,19 @@
 <template>
   <el-main>
     <breadcrumb className="bdb" first="UI" second="图表"></breadcrumb>
-    <el-row>
-      <el-col :span="24">
-        <el-card class="box-card">
-          <!-- <div slot="header" class="clearfix">
-            <span>堆叠区域图</span>
-          </div> -->
-          <div id="drawChart1" style="height:260px;"></div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="12">
-        <el-card class="box-card">
+    <div class="" style="padding: 0 10px;">
+      <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tab-pane label="图表1" name="first" lazy>
+          <div id="drawChart1" style="height:280px;"></div>
+        </el-tab-pane>
+        <el-tab-pane label="图表2" name="second" lazy>
           <div id="drawChart2" style="height:280px;"></div>
-        </el-card>
-      </el-col>
-      <el-col :span="12">
-        <el-card class="box-card">
+        </el-tab-pane>
+        <el-tab-pane label="图表3" name="third" lazy>
           <div id="drawChart3" style="height:280px;"></div>
-        </el-card>
-      </el-col>
-    </el-row>
+        </el-tab-pane>
+      </el-tabs>
+    </div>
   </el-main>
 </template>
 
@@ -36,17 +27,22 @@ export default {
   },
   data () {
     return {
-
+      activeName: 'first'
     }
   },
   created () {
   },
   mounted () {
     this.drawChart1()
+  },
+  updated () {
+    this.drawChart1()
     this.drawChart2()
     this.drawChart3()
   },
   methods: {
+    handleClick (tab, event) {
+    },
     drawChart1 () {
       let myChart = echarts.init(document.getElementById('drawChart1'))
       let option = {

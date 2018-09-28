@@ -1,8 +1,7 @@
-.main-table {
-  height: calc(100% - 62px);
-  padding: 10px;
-  .el-table {
-    border: 1px solid #ebeef5;
+.el-table {
+  border: 1px solid #ebeef5;
+  .table-header {
+    color: #000;
     th {
       background: #eef1f6;
     }

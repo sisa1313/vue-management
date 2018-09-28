@@ -41,6 +41,18 @@ const router = new vueRouter({
           name: 'echarts',
           component: resolve => require(['@/components/pages/echarts'], resolve),
           meta: { title: '图表' }
+        },
+        {
+          path: '/basicTable',
+          name: 'basicTable',
+          component: resolve => require(['@/components/table/basic-table'], resolve),
+          meta: { title: '基础表格' }
+        },
+        {
+          path: '/basicForm',
+          name: 'basicForm',
+          component: resolve => require(['@/components/form/basic-form'], resolve),
+          meta: { title: '基础表单' }
         }
       ]
     },

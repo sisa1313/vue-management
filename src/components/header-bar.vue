@@ -12,7 +12,7 @@
     <ul class="el-menu-header-right clearfix">
       <li>
         <el-tooltip effect="dark" content="全屏" placement="bottom">
-          <i class="el-icon-a-drag curp fs26" @click="screenfullClick"></i>
+          <i class="el-icon-a-fullscreen curp fs26" @click="screenfullClick"></i>
         </el-tooltip>
       </li>
       <li>
@@ -21,17 +21,21 @@
         </el-tooltip>
       </li>
       <li>
-        <el-popover placement="bottom" title="" width="200" :visible-arrow="false" trigger="click">
-          <ul class="popover-list">
-            <li>用户信息</li>
-            <li>手机号：18533333333</li>
-          </ul>
-          <ul class="popover-list mt10">
-            <li>企业信息</li>
-            <li>所在企业：九恒星</li>
-          </ul>
-          <img class="curp" src="@/assets/img/b1.jpg" slot="reference" alt="">
-        </el-popover>
+        <el-dropdown placement="bottom-end">
+          <span class="el-dropdown-link curp">
+            <img src="@/assets/img/b1.jpg" slot="reference" alt="">
+            <span class="ml5">admin</span>
+            <i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>
+              <a target="_blank" href="https://github.com/sisa1313/vue-management">github地址</a>
+            </el-dropdown-item>
+            <el-dropdown-item>
+              <router-link tag="div" :to="{ name: 'login' }">退出登录</router-link>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
       </li>
     </ul>
   </el-header>

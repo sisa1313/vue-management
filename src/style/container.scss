@@ -23,12 +23,8 @@
         justify-content: center;
         min-width: 80px;
         height: 100%;
-        i {
-          transform: rotate(45deg);
-        }
       }
       span {
-        display: block;
         img {
           width: 40px;
           border-radius: 50%;
@@ -39,6 +35,9 @@
   .el-main {
     padding: 0;
     background: #FFF;
+    .main-container {
+      padding: 10px;
+    }
     .blank {
       height: 100%;
       display: flex;

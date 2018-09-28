@@ -28,15 +28,31 @@
     "icon": "el-icon-a-areachart"
   },
   {
-    "title": "表单组件",
-    "name": "form",
+    "title": "表格",
+    "name": "table",
     "leaf": 1,
     "lvl": 1,
     "icon": "el-icon-a-table",
     "children": [
       {
-        "title": "表单1",
-        "name": "form1",
+        "title": "基础表格",
+        "name": "basicTable",
+        "leaf": 0,
+        "lvl": 2,
+        "children": []
+      }
+    ]
+  },
+  {
+    "title": "表单",
+    "name": "form",
+    "leaf": 1,
+    "lvl": 1,
+    "icon": "el-icon-a-detail",
+    "children": [
+      {
+        "title": "基础表单",
+        "name": "basicForm",
         "leaf": 0,
         "lvl": 2,
         "children": []
