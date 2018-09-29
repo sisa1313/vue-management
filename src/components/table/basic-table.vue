@@ -14,8 +14,16 @@
       <el-table :data="tableData" height="100%" header-row-class-name="table-header"
       v-loading="formLoading" element-loading-text="拼命加载中">
         <el-table-column type="index" label="序号" align="center" width="50" fixed></el-table-column>
-        <el-table-column v-for="(item, index) in tableColumnData" :key="index" :prop="item.prop" :label="item.label"
-        :class-name="item.className" align="center" :fixed="item.fixed" :sortable="item.sortable ? item.sortable : false" show-overflow-tooltip></el-table-column>
+        <el-table-column prop="name" label="姓名" align="center" class-name="cFF4949P" fixed></el-table-column>
+        <el-table-column label="地址" align="center" show-overflow-tooltip>
+          <template slot-scope="scope">
+            <el-tooltip class="item" effect="light" placement="right">
+              <span slot="content" class="fs12 curp" type="text" @click="copyClick(scope.row)">点击复制</span>
+              <span v-text="scope.row.address"></span>
+            </el-tooltip>
+          </template>
+        </el-table-column>
+        <el-table-column prop="date" label="日期" align="center" sortable></el-table-column>
         <el-table-column label="操作" align="center" fixed="right">
           <template slot-scope="scope">
             <el-button type="text" size="mini" @click="modifyClick(scope.row)">编辑</el-button>
@@ -27,6 +35,7 @@
         <el-pagination class="fr mr10" background @size-change="handleSizeChange" @current-change="handleCurrentChange"
         :current-page.sync="page" :page-size="limit" layout="total, prev, pager, next, jumper" :total="total"></el-pagination>
       </div>
+      <textarea id="input" style="position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;"></textarea>
     </div>
     <el-dialog title="个人信息" width="30%" :visible.sync="dialogFormVisible">
       <el-form :model="form">
@@ -62,11 +71,6 @@ export default {
       dialogFormVisible: false,
       formLabelWidth: '60px',
       tableData: [],
-      tableColumnData: [
-        { prop: 'name', label: '姓名', className: 'cFF4949P', fixed: 'fixed' },
-        { prop: 'address', label: '地址' },
-        { prop: 'date', label: '日期', sortable: true }
-      ],
       form: {},
       page: 1,
       limit: 15,
@@ -84,6 +88,14 @@ export default {
       console.log(`当前页: ${val}`)
       this.page = val
       this.getCityData(this.page)
+    },
+    copyClick (row) {
+      let copyText = row.address
+      let input = document.getElementById("input")
+      input.value = copyText
+      input.select()
+      document.execCommand('copy')
+      this.$message.success('复制成功')
     },
     modifyClick (row) {
       console.log(row)

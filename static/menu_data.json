@@ -56,6 +56,13 @@
         "leaf": 0,
         "lvl": 2,
         "children": []
+      },
+      {
+        "title": "上传",
+        "name": "upload",
+        "leaf": 0,
+        "lvl": 2,
+        "children": []
       }
     ]
   }

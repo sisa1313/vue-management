@@ -53,6 +53,12 @@ const router = new vueRouter({
           name: 'basicForm',
           component: resolve => require(['@/components/form/basic-form'], resolve),
           meta: { title: '基础表单' }
+        },
+        {
+          path: '/upload',
+          name: 'upload',
+          component: resolve => require(['@/components/form/upload'], resolve),
+          meta: { title: '上传' }
         }
       ]
     },
