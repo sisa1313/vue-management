@@ -2,8 +2,8 @@
 <template lang="html">
   <el-breadcrumb separator="/" :class="className">
     <el-breadcrumb-item :to="{ name: 'blank' }">空白页</el-breadcrumb-item>
-    <el-breadcrumb-item>{{ first }}</el-breadcrumb-item>
-    <el-breadcrumb-item>{{ second }}</el-breadcrumb-item>
+    <el-breadcrumb-item v-if="first">{{ first }}</el-breadcrumb-item>
+    <el-breadcrumb-item v-if="second">{{ second }}</el-breadcrumb-item>
   </el-breadcrumb>
 </template>
 

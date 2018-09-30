@@ -1,7 +1,7 @@
 // echarts.vue
 <template>
   <div>
-    <breadcrumb className="bdb" first="UI" second="图表"></breadcrumb>
+    <breadcrumb className="bdb" first="图表" second=""></breadcrumb>
     <div class="" style="padding: 0 10px;">
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane label="图表1" name="first" lazy>

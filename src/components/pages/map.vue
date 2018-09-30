@@ -1,7 +1,7 @@
 // map.vue
 <template>
   <div>
-    <breadcrumb className="bdb" first="UI" second="地图"></breadcrumb>
+    <breadcrumb className="bdb" first="地图" second=""></breadcrumb>
     <el-card class="box-card pb100">
       <div slot="header" class="clearfix">
         <span>高德地图</span>

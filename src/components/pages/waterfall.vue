@@ -3,7 +3,7 @@
   <vue-waterfall-easy class="waterfall-info" ref="waterfall" :imgsArr="imgsArr" @scrollReachBottom="fetchImgsData"
   @imgError="imgErrorFn">
     <div slot="waterfall-head">
-      <breadcrumb className="bdb" first="UI" second="瀑布流"></breadcrumb>
+      <breadcrumb className="bdb" first="瀑布流" second=""></breadcrumb>
     </div>
     <div class="img-info" slot-scope="props">
       <p class="some-info fw mt5">第{{props.index + 1}}张图片</p>
