@@ -1,6 +1,6 @@
 // upload.vue
 <template>
-  <div class="main-container">
+  <div>
     <breadcrumb className="bdb" first="表单" second="上传"></breadcrumb>
     <div class="container-padding">
       <el-row :gutter="20">

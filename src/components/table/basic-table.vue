@@ -2,7 +2,7 @@
 <template>
   <div class="main-container">
     <breadcrumb className="bdb" first="表格" second="基础表格"></breadcrumb>
-    <div class="container-padding table-height">
+    <div class="container-padding height">
       <el-table :data="tableData" height="100%" header-row-class-name="table-header"
       v-loading="formLoading" element-loading-text="拼命加载中">
         <el-table-column type="index" label="序号" align="center" width="50" fixed></el-table-column>
@@ -155,7 +155,7 @@ export default {
 </script>
 
 <style scoped>
-.table-height {
-  height: calc(100% - 125px);
+.container-padding.height {
+  height: calc(100% - 97px);
 }
 </style>
