@@ -1,6 +1,6 @@
 // draggable.vue
 <template>
-  <el-main>
+  <div>
     <breadcrumb className="bdb" first="UI" second="拖拽"></breadcrumb>
     <el-form :inline="true" class="main-form-inline">
       <el-form-item label="启用拖拽">
@@ -15,7 +15,7 @@
         <draggable class="list-group" element="ul" v-model="list" :options="dragOptions" :move="onMove" @start="isDragging = true" @end="isDragging = false">
           <transition-group type="transition" :name="'flip-list'">
             <li class="list-group-item" v-for="element in list" :key="element.order">
-              <i :class="element.fixed? 'el-icon-error' : 'el-icon-success'" @click=" element.fixed=! element.fixed"></i>
+              <i :class="element.fixed ? 'el-icon-error' : 'el-icon-success'" @click=" element.fixed=! element.fixed"></i>
               {{element.name}}
               <span class="badge">{{element.order}}</span>
             </li>
@@ -40,7 +40,7 @@
         <pre>{{list2String}}</pre>
       </el-col>
     </el-row>
-  </el-main>
+  </div>
 </template>
 
 <script>

@@ -1,18 +1,16 @@
 // waterfall.vue
 <template>
-  <el-main>
-    <vue-waterfall-easy class="waterfall-info" ref="waterfall" :imgsArr="imgsArr" @scrollReachBottom="fetchImgsData"
-    @imgError="imgErrorFn">
-      <div slot="waterfall-head">
-        <breadcrumb className="bdb" first="UI" second="瀑布流"></breadcrumb>
-      </div>
-      <div class="img-info" slot-scope="props">
-        <p class="some-info fw mt5">第{{props.index + 1}}张图片</p>
-        <p class="some-info">{{props.value.info}}</p>
-      </div>
-      <div slot="waterfall-over">已经到底了</div>
-    </vue-waterfall-easy>
-  </el-main>
+  <vue-waterfall-easy class="waterfall-info" ref="waterfall" :imgsArr="imgsArr" @scrollReachBottom="fetchImgsData"
+  @imgError="imgErrorFn">
+    <div slot="waterfall-head">
+      <breadcrumb className="bdb" first="UI" second="瀑布流"></breadcrumb>
+    </div>
+    <div class="img-info" slot-scope="props">
+      <p class="some-info fw mt5">第{{props.index + 1}}张图片</p>
+      <p class="some-info">{{props.value.info}}</p>
+    </div>
+    <div slot="waterfall-over">已经到底了</div>
+  </vue-waterfall-easy>
 </template>
 
 <script>
@@ -45,7 +43,6 @@ export default {
           this.$refs.waterfall.waterfallOver()
           return
         }
-        console.log(this.group)
         this.imgsArr = this.imgsArr.concat(response.data)
       }).catch(error => {
         // 请求失败回调

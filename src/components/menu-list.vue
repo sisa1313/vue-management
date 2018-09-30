@@ -25,7 +25,7 @@ export default {
   name: 'menuList',
   data () {
     return {
-      collapseState: true,
+      collapseState: false,
       menuTree: this.sessionGet('MENU_DATA'),
       defaultOpeneds: [],
       submenuList: [],

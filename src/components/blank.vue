@@ -1,10 +1,8 @@
 // blank.vue
 <template>
-  <el-main>
-    <div class="blank">
-      空白页
-    </div>
-  </el-main>
+  <div class="blank">
+    空白页
+  </div>
 </template>
 
 <script>

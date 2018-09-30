@@ -36,7 +36,10 @@
     padding: 0;
     background: #FFF;
     .main-container {
-      padding: 10px;
+      height: 100%;
+      .container-padding {
+        padding: 10px;
+      }
     }
     .blank {
       height: 100%;

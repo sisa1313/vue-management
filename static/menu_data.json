@@ -1,5 +1,12 @@
 [
   {
+    "title": "空白页",
+    "name": "blank",
+    "leaf": 0,
+    "lvl": 1,
+    "icon": "el-icon-a-home"
+  },
+  {
     "title": "瀑布流",
     "name": "waterfall",
     "leaf": 0,

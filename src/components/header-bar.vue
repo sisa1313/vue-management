@@ -48,7 +48,7 @@ export default {
   name: 'headerBar',
   data () {
     return {
-      collapseState: true,
+      collapseState: false,
       colorDefault: '#F0F2F5',
       headerStyle: 'linear-gradient(to right, #F0F2F5 0, #F0F2F5 100%)'
     }

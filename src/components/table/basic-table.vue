@@ -1,16 +1,8 @@
 // basic-table.vue
 <template>
-  <el-main>
+  <div class="main-container">
     <breadcrumb className="bdb" first="表格" second="基础表格"></breadcrumb>
-    <el-form :inline="true" class="main-form-inline bdb">
-      <el-form-item label="企业名称">
-      </el-form-item>
-      <el-form-item label="预订日期">
-      </el-form-item>
-      <el-form-item label="订单状态">
-      </el-form-item>
-    </el-form>
-    <div class="main-container container-height">
+    <div class="container-padding table-height">
       <el-table :data="tableData" height="100%" header-row-class-name="table-header"
       v-loading="formLoading" element-loading-text="拼命加载中">
         <el-table-column type="index" label="序号" align="center" width="50" fixed></el-table-column>
@@ -54,7 +46,7 @@
         <el-button type="primary" @click="confirmClick">确 定</el-button>
       </div>
     </el-dialog>
-  </el-main>
+  </div>
 </template>
 
 <script>
@@ -163,7 +155,7 @@ export default {
 </script>
 
 <style scoped>
-.container-height {
-  height: calc(100% - 139px);
+.table-height {
+  height: calc(100% - 125px);
 }
 </style>

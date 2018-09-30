@@ -1,6 +1,6 @@
 // map.vue
 <template>
-  <el-main>
+  <div>
     <breadcrumb className="bdb" first="UI" second="地图"></breadcrumb>
     <el-card class="box-card pb100">
       <div slot="header" class="clearfix">
@@ -19,7 +19,7 @@
         </div>
       </div>
     </el-card>
-  </el-main>
+  </div>
 </template>
 
 <script>

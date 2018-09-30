@@ -1,8 +1,8 @@
 // upload.vue
 <template>
-  <el-main>
+  <div class="main-container">
     <breadcrumb className="bdb" first="表单" second="基础表单"></breadcrumb>
-    <div class="main-container">
+    <div class="container-padding">
       <el-row :gutter="20">
         <el-col :md="12">
           <el-card>
@@ -46,7 +46,7 @@
         </el-col>
       </el-row>
     </div>
-  </el-main>
+  </div>
 </template>
 
 <script>
@@ -70,9 +70,12 @@ export default {
     this.cropImg = this.defaultSrc
   },
   methods: {
-    handleSuccess (res, file) {},
-    handleRemove (file, fileList) {},
-    handleError (res, file, fileList) {},
+    handleSuccess (res, file) {
+    },
+    handleRemove (file, fileList) {
+    },
+    handleError (res, file, fileList) {
+    },
     beforeUpload (file) {
       const isJPG = file.type === 'image/jpeg'
       const isPNG = file.type === 'image/png'
@@ -84,13 +87,6 @@ export default {
       }
       if (!isLt2M) {
         this.$message.error('上传附件大小不能超过 1MB!')
-      }
-      if (this.fileKeys.length > 2) {
-        this.$message.error('上传附件不能超过3个!')
-        flag = false
-      }
-      if (this.fileNames.indexOf(file.name) > -1) {
-        this.$message.error('不能上传相同的附件!')
         flag = false
       }
       return flag && isLt2M
