@@ -12,6 +12,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import NProgress from 'nprogress' // Progress 进度条
 import 'nprogress/nprogress.css' // Progress 进度条样式
 import VueAMap from 'vue-amap'
+import '@/style/lib/animate.css' // 动画样式
 import App from '@/App'
 
 Vue.config.productionTip = false

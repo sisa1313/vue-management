@@ -1,6 +1,6 @@
 // draggable.vue
 <template>
-  <div>
+  <div class="main-container">
     <breadcrumb className="bdb" first="拖拽" second=""></breadcrumb>
     <el-form :inline="true" class="main-form-inline">
       <el-form-item label="启用拖拽">

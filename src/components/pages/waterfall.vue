@@ -1,6 +1,6 @@
 // waterfall.vue
 <template>
-  <vue-waterfall-easy class="waterfall-info" ref="waterfall" :imgsArr="imgsArr" @scrollReachBottom="fetchImgsData"
+  <vue-waterfall-easy class="waterfall-info main-container" ref="waterfall" :imgsArr="imgsArr" @scrollReachBottom="fetchImgsData"
   @imgError="imgErrorFn">
     <div slot="waterfall-head">
       <breadcrumb className="bdb" first="瀑布流" second=""></breadcrumb>

@@ -1,11 +1,11 @@
 // upload.vue
 <template>
-  <div>
+  <div class="main-container">
     <breadcrumb className="bdb" first="表单" second="上传"></breadcrumb>
     <div class="container-padding">
       <el-row :gutter="20">
         <el-col :md="12">
-          <el-card>
+          <el-card shadow="hover">
             <div slot="header" class="clearfix">
               <span>支持拖拽</span>
             </div>
@@ -18,7 +18,7 @@
           </el-card>
         </el-col>
         <el-col :md="12">
-          <el-card>
+          <el-card shadow="hover">
             <div slot="header" class="clearfix">
               <span>支持裁剪</span>
             </div>
@@ -53,7 +53,6 @@
 import breadcrumb from '@/components/breadcrumb'
 import VueCropper from 'vue-cropperjs'
 export default {
-  name: 'basicForm',
   components: {
     breadcrumb,
     VueCropper

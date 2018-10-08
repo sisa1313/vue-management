@@ -1,6 +1,6 @@
 // basic-form.vue
 <template>
-  <div>
+  <div class="main-container">
     <breadcrumb className="bdb" first="表单" second="基础表单"></breadcrumb>
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
       <el-form-item label="活动名称" prop="name">
@@ -56,7 +56,6 @@
 <script>
 import breadcrumb from '@/components/breadcrumb'
 export default {
-  name: 'basicForm',
   components: {
     breadcrumb
   },

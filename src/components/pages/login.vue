@@ -4,9 +4,11 @@
     <div class="login-box">
       <div class="pr">
         <p class="fw ta cff fs22 mb20">vue-management</p>
-        <input type="text" class="login-uname" maxlength="40" placeholder="手机号 / 邮箱" v-model.trim="name" @keyup.enter="userLogin">
+        <input type="text" class="login-uname" maxlength="40" placeholder="手机号 / 邮箱" autocomplete="off"
+        v-model.trim="name" @keyup.enter="userLogin">
         <div class="input_close" @click="loginClear" v-if="loginClearShow"></div>
-        <input type="password" class="login-pwd" maxlength="20" placeholder="密码" v-model.trim="password" @keyup.enter="userLogin">
+        <input type="password" class="login-pwd" maxlength="20" placeholder="密码" autocomplete="off"
+        v-model.trim="password" @keyup.enter="userLogin">
         <el-button class="wd mt40 mb40" type="primary" @click="userLogin">登录</el-button>
       </div>
     </div>

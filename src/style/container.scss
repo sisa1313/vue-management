@@ -37,6 +37,7 @@
     background: #FFF;
     .main-container {
       height: calc(100% - 30px);
+      overflow: auto;
     }
     .container-padding {
       padding: 10px;

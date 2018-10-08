@@ -21,6 +21,22 @@
     "icon": "el-icon-a-block"
   },
   {
+    "title": "动画",
+    "name": "animation",
+    "leaf": 1,
+    "lvl": 1,
+    "icon": "el-icon-a-laptop",
+    "children": [
+      {
+        "title": "基础动画",
+        "name": "basicAnimation",
+        "leaf": 0,
+        "lvl": 2,
+        "children": []
+      }
+    ]
+  },
+  {
     "title": "地图",
     "name": "map",
     "leaf": 0,

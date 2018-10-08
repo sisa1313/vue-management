@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import bus from './bus';
+import bus from './bus'
 import screenfull from 'screenfull'
 export default {
   name: 'headerBar',

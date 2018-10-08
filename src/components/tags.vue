@@ -48,6 +48,7 @@ export default {
     closeAll () {
       this.tagsList = []
       this.$router.push('/blank')
+      bus.$emit('close_all')
     },
     // 关闭其他标签
     closeOther () {

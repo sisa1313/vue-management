@@ -1,6 +1,6 @@
 // echarts.vue
 <template>
-  <div>
+  <div class="main-container">
     <breadcrumb className="bdb" first="图表" second=""></breadcrumb>
     <div class="" style="padding: 0 10px;">
       <el-tabs v-model="activeName" @tab-click="handleClick">

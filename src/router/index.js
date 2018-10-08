@@ -59,6 +59,12 @@ const router = new vueRouter({
           name: 'upload',
           component: resolve => require(['@/components/form/upload'], resolve),
           meta: { title: '上传' }
+        },
+        {
+          path: '/basicAnimation',
+          name: 'basicAnimation',
+          component: resolve => require(['@/components/animation/basic-animation'], resolve),
+          meta: { title: '基础动画' }
         }
       ]
     },

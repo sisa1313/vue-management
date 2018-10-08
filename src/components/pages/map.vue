@@ -1,23 +1,23 @@
 // map.vue
 <template>
-  <div>
+  <div class="main-container">
     <breadcrumb className="bdb" first="地图" second=""></breadcrumb>
-    <el-card class="box-card pb100">
+    <el-card shadow="never">
       <div slot="header" class="clearfix">
         <span>高德地图</span>
       </div>
       <div class="amap-page-container">
-        <div :style="{width:'800px', height:'400px'}">
+        <div :style="{width:'100%', height:'450px'}">
           <el-amap vid="amap" :plugin="plugin" class="amap-demo" :center="center"></el-amap>
-          <div class="toolbar">
-              <span v-if="loaded">
-                location: lng = {{ lng }} lat = {{ lat }}
-              </span>
-            <span v-else>正在定位</span>
-          </div>
-          <el-button @click="req_post">查询周边</el-button>
         </div>
       </div>
+      <div class="toolbar">
+          <span v-if="loaded">
+            location: lng = {{ lng }} lat = {{ lat }}
+          </span>
+        <span v-else>正在定位</span>
+      </div>
+      <el-button @click="req_post">查询周边</el-button>
     </el-card>
   </div>
 </template>
@@ -70,9 +70,8 @@ export default {
   },
   methods: {
     req_post () {
-      console.log(1)
       const that = this
-      const registerUrl = "http://restapi.amap.com/v3/batch?key=8221cd55866583cce7bebdce503ecdd3"
+      const registerUrl = "https://restapi.amap.com/v3/batch?key=8221cd55866583cce7bebdce503ecdd3"
       const newUserInfo = {
         "ops": [
           {
@@ -85,7 +84,8 @@ export default {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
       }).then(function (response) {
-        console.log(response['data'][0]['body']['pois'])
+        console.log(response)
+        console.log(response['data'][0]['body']['sec_code'])
       })
       .catch(function (error) {
         console.log(error)
@@ -95,10 +95,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .amap-page-container {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.toolbar {
+  height: auto;
 }
 </style>

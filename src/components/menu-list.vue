@@ -1,7 +1,7 @@
 // menu-list.vue
 <template lang="html">
   <el-aside style="width: auto;">
-    <el-menu :default-active="$route.name" class="el-menu-vertical-aside" background-color="#409EFF" text-color="#fff"
+    <el-menu :default-active="defaultActive" class="el-menu-vertical-aside" background-color="#409EFF" text-color="#fff"
      active-text-color="#fff" :default-openeds="defaultOpeneds" @select="handleSelect" @open="handleOpen" @close="handleClose"
      :collapse="collapseState" router unique-opened>
       <template v-for="item in menuTree">
@@ -20,13 +20,14 @@
 </template>
 
 <script>
-import bus from './bus';
+import bus from './bus'
 export default {
   name: 'menuList',
   data () {
     return {
       collapseState: false,
       menuTree: this.sessionGet('MENU_DATA'),
+      defaultActive: this.$route.name,
       defaultOpeneds: [],
       submenuList: [],
       menuList: []
@@ -34,16 +35,17 @@ export default {
   },
   created () {
     // 通过 Event Bus 进行组件间通信，来折叠侧边栏
-    bus.$on('collapse_state', data => {
+    bus.$on('collapse_state', data => { // header-bar组件点击展开折叠
       this.collapseState = data
+    })
+    bus.$on('close_all', data => { // tags组件点击关闭所有
+      this.defaultActive = this.$route.name
+      this.defaultOpeneds = []
     })
   },
   methods: {
     handleSelect (index) {
-      console.log(index)
-    },
-    collapseClick () { // 点击收起/展开按钮
-      this.collapseState = !this.collapseState
+      this.defaultActive = index
     },
     handleOpen(key, keyPath) {
       this.defaultOpeneds = keyPath
