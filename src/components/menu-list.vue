@@ -38,10 +38,15 @@ export default {
     bus.$on('collapse_state', data => { // header-bar组件点击展开折叠
       this.collapseState = data
     })
-    bus.$on('close_all', data => { // tags组件点击关闭所有
+    bus.$on('close_all', data => { // tags组件点击关闭所有折叠二级菜单
       this.defaultActive = this.$route.name
       this.defaultOpeneds = []
     })
+  },
+  watch: {
+    $route (newValue, oldValue) { // 路由后退时defaultActive重新赋值
+      this.defaultActive = newValue.name
+    }
   },
   methods: {
     handleSelect (index) {

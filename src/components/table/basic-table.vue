@@ -52,7 +52,6 @@
 <script>
 import breadcrumb from '@/components/breadcrumb'
 export default {
-  name: 'basicTable',
   components: {
     breadcrumb
   },

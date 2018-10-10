@@ -4,7 +4,7 @@ import vueRouter from 'vue-router'
 Vue.use(vueRouter)
 
 const router = new vueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',
@@ -65,6 +65,12 @@ const router = new vueRouter({
           name: 'basicAnimation',
           component: resolve => require(['@/components/animation/basic-animation'], resolve),
           meta: { title: '基础动画' }
+        },
+        {
+          path: '/caseAnimation',
+          name: 'caseAnimation',
+          component: resolve => require(['@/components/animation/case-animation'], resolve),
+          meta: { title: '动画案例' }
         }
       ]
     },

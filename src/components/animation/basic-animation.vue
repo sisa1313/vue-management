@@ -7,10 +7,11 @@
         <el-switch v-model="animated" inactive-text="全部关闭" active-text="全部开启" @change="animatedAll(animated)"></el-switch>
       </el-row>
       <el-row :gutter="10">
-        <el-col :md="6" v-for="(v, i) in animations">
-          <div class="gutter-box">
-            <el-card :class="[animated || (animatedOne === i) ? 'animated infinite ' + v : '']" shadow="hover">
-              <div class="text-center" v-text="v" @mouseenter="animatedOneFun(i)" @mouseleave="animatedOneOverFun"></div>
+        <el-col :md="6" v-for="(v, i) in animations" :key="i">
+          <div class="gutter-box" :class="[animated || (animatedOne === i) ? 'animated infinite ' + v : '']"
+          @mouseenter="animatedOneFun(i)" @mouseleave="animatedOneOverFun">
+            <el-card shadow="hover">
+              <div class="text-center" v-text="v"></div>
             </el-card>
           </div>
         </el-col>
@@ -64,6 +65,7 @@ export default {
 <style scoped>
 .gutter-box {
   padding: 5px 0;
+  cursor: pointer;
 }
 .el-card {
   display: flex;

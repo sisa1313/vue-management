@@ -33,6 +33,13 @@
         "leaf": 0,
         "lvl": 2,
         "children": []
+      },
+      {
+        "title": "动画案例",
+        "name": "caseAnimation",
+        "leaf": 0,
+        "lvl": 2,
+        "children": []
       }
     ]
   },
