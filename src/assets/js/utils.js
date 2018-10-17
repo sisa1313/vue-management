@@ -217,19 +217,15 @@ export default {
         this.$message.error('客户端请求超时, 请稍后重试')
       }
     }
-    // localStorage取数据 后改为sessionStorage
     Vue.prototype.sessionGet = function (item) {
       return JSON.parse(sessionStorage.getItem(item))
     }
-    // localStorage存数据 后改为sessionStorage
     Vue.prototype.sessionSet = function (item, obj) {
       sessionStorage.setItem(item, JSON.stringify(obj))
     }
-    // localStorage删数据 后改为sessionStorage
     Vue.prototype.sessionRemove = function (item) {
       sessionStorage.removeItem(item)
     }
-    // localStorage清除所有数据 后改为sessionStorage
     Vue.prototype.sessionClear = function () {
       sessionStorage.clear()
     }

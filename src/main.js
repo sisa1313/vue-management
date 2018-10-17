@@ -35,17 +35,23 @@ VueAMap.initAMapApiLoader({
 const whiteList = ['login'] // 不重定向白名单
 router.beforeEach((to, from, next) => {
   NProgress.start() // 开始Progress
-  if (whiteList.indexOf(to.name) !== -1) {
-    next()
+  const loginState = store.state.loginState
+  if (to.name === 'permissions') {
+    loginState ? next() : next({ name: '403' })
   } else {
-    if (store.getters.loginState) {
-      next()
-      NProgress.done() // 结束Progress
-    } else {
-      next({ name: 'login' })
-      NProgress.done() // 结束Progress
-    }
+    next()
   }
+  // if (whiteList.indexOf(to.name) !== -1) {
+  //   next()
+  // } else {
+  //   if (store.getters.loginState) {
+  //     next()
+  //     NProgress.done() // 结束Progress
+  //   } else {
+  //     next({ name: 'login' })
+  //     NProgress.done() // 结束Progress
+  //   }
+  // }
 })
 
 router.afterEach(() => {

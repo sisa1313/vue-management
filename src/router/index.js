@@ -8,6 +8,10 @@ const router = new vueRouter({
   routes: [
     {
       path: '/',
+      redirect: { name: 'blank' }
+    },
+    {
+      path: '/',
       name: 'home',
       component: resolve => require(['@/components/home'], resolve),
       meta: { title: '整合页' },
@@ -71,6 +75,18 @@ const router = new vueRouter({
           name: 'caseAnimation',
           component: resolve => require(['@/components/animation/case-animation'], resolve),
           meta: { title: '动画案例' }
+        },
+        {
+          path: '/permissions',
+          name: 'permissions',
+          component: resolve => require(['@/components/setting/permissions'], resolve),
+          meta: { title: '权限' }
+        },
+        {
+          path: '/403',
+          name: '403',
+          component: resolve => require(['@/components/setting/403'], resolve),
+          meta: { title: '403' }
         }
       ]
     },
@@ -79,6 +95,12 @@ const router = new vueRouter({
       name: 'login',
       component: resolve => require(['@/components/pages/login'], resolve),
       meta: { title: '登录页' }
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: resolve => require(['@/components/setting/404'], resolve),
+      meta: { title: '404' }
     }
   ]
 })

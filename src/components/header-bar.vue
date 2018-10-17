@@ -24,7 +24,7 @@
         <el-dropdown placement="bottom-end">
           <span class="el-dropdown-link curp">
             <img src="@/assets/img/b1.jpg" slot="reference" alt="">
-            <span class="ml5">admin</span>
+            <span class="ml5" v-text="userName"></span>
             <i class="el-icon-arrow-down el-icon--right"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
@@ -48,6 +48,7 @@ export default {
   name: 'headerBar',
   data () {
     return {
+      userName: this.sessionGet('userName') ? this.sessionGet('userName') : '游客',
       collapseState: false,
       colorDefault: '#F0F2F5',
       headerStyle: 'linear-gradient(to right, #F0F2F5 0, #F0F2F5 100%)'

@@ -70,6 +70,13 @@ p {
 }
 .clearfix:after {
   clear: both;
+  // 万能清除法
+  // content:".";
+	// clear:both;
+	// display:block;
+	// height:0;
+	// overflow:hidden;
+	// visibility:hidden;
 }
 .clearfix {
   zoom:1;
@@ -79,6 +86,7 @@ p {
 .dis-in-block{ display:inline-block;}
 .dis-in-tab{display:inline-table;}
 .dis-in-tab{display:inline;}
+.dis-ctr-flex{display:flex; align-items: center; justify-content: center;}
 .ks-overlay-hidden{visibility:hidden;}
 /*float*/
 .ofz{overflow:hidden; zoom:1;}
@@ -109,6 +117,7 @@ p {
 .fs44{font-size:44px;}
 .fs48{font-size:48px;}
 .fs50{font-size:50px;}
+.fs200{font-size:200px;}
 
 
 /*font-family*/

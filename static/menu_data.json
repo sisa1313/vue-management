@@ -95,5 +95,28 @@
         "children": []
       }
     ]
+  },
+  {
+    "title": "设置",
+    "name": "setting",
+    "leaf": 1,
+    "lvl": 1,
+    "icon": "el-icon-a-setting",
+    "children": [
+      {
+        "title": "权限测试",
+        "name": "permissions",
+        "leaf": 0,
+        "lvl": 2,
+        "children": []
+      },
+      {
+        "title": "404",
+        "name": "404",
+        "leaf": 0,
+        "lvl": 2,
+        "children": []
+      }
+    ]
   }
 ]
